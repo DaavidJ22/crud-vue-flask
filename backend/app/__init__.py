@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from flask import Flask
 
+from . import models  # noqa: F401
 from .api import api_bp
 from .extensions import cors, db, migrate
 
