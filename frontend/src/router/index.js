@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import ClientesView from '../views/ClientesView.vue'
 import DashboardView from '../views/DashboardView.vue'
 
 const router = createRouter({
@@ -15,7 +16,8 @@ const router = createRouter({
     },
     {
       path: '/clientes',
-      redirect: '/dashboard',
+      name: 'clientes',
+      component: ClientesView,
     },
     {
       path: '/productos',
