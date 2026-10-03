@@ -46,26 +46,44 @@ defineProps({
   width: 100%;
   overflow-x: auto;
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.65rem;
+  box-shadow: 0 4px 12px rgb(15 23 42 / 4%);
 }
 
 .data-table {
   width: 100%;
+  min-width: 680px;
   border-collapse: collapse;
 }
 
 .data-table th,
 .data-table td {
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1rem;
   text-align: left;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .data-table th {
-  color: #374151;
-  background: #f9fafb;
-  font-size: 0.875rem;
+  color: #475569;
+  background: #f8fafc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.data-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: #fbfdff;
+}
+
+.data-table tbody tr:hover {
+  background: #eff6ff;
 }
 
 .data-table tbody tr:last-child td {
@@ -77,7 +95,8 @@ defineProps({
 }
 
 .data-table__empty {
-  color: #6b7280;
+  padding: 2rem 1rem !important;
+  color: var(--color-muted);
   text-align: center;
 }
 </style>

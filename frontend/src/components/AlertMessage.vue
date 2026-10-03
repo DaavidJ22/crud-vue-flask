@@ -19,9 +19,13 @@ defineProps({
 
 <style scoped>
 .alert {
-  padding: 0.8rem 1rem;
+  padding: 0.85rem 1rem;
   border: 1px solid transparent;
-  border-radius: 0.4rem;
+  border-left-width: 4px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgb(15 23 42 / 5%);
+  font-size: 0.925rem;
+  font-weight: 600;
 }
 
 .alert--error {

@@ -49,26 +49,35 @@ function updateValue(event) {
 <style scoped>
 .field {
   display: grid;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .field__label {
-  color: #374151;
+  color: #334155;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
 .field__input {
   width: 100%;
-  padding: 0.65rem 0.75rem;
-  color: #111827;
+  min-height: 2.75rem;
+  padding: 0.7rem 0.8rem;
+  color: var(--color-heading);
   background: #ffffff;
-  border: 1px solid #d1d5db;
-  border-radius: 0.4rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
   outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field__input::placeholder {
+  color: #94a3b8;
 }
 
 .field__input:focus {
-  border-color: #2563eb;
+  border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgb(37 99 235 / 15%);
 }
 
@@ -78,6 +87,6 @@ function updateValue(event) {
 
 .field__error {
   color: #b91c1c;
-  font-size: 0.875rem;
+  font-size: 0.825rem;
 }
 </style>
